@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Form</title>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "252";
+            if (password === correctPassword) {
+                window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=doiLUPWbZ0eL9oHrczqvEdzXuNchIAhKjoRRyEQ_PA5UMjZIRThOVlJTVkNISkJJS1pHQTVTWkpBUi4u";
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+                document.getElementById('password').value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20%;">
+        <h1>Acesso Protegido</h1>
+        <p>Insira a senha para acessar o formulário:</p>
+        <form onsubmit="event.preventDefault(); checkPassword();">
+            <input type="password" id="password" placeholder="Digite a senha">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
